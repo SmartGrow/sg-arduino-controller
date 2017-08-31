@@ -18,6 +18,7 @@ sourceCompatibility = 1.8
 
 repositories {
 	mavenCentral()
+	mavenLocal()
 }
 
 ext {
@@ -28,6 +29,9 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-actuator')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('org.springframework.cloud:spring-cloud-starter-config')
+
+	compile("sg-commons:sg-springboot-web-filter:0.0.1")
+	compile("sg-commons:sg-springboot-web-security:0.0.1")
 
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
