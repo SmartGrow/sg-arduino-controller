@@ -1,5 +1,3 @@
-import { setTimeout } from 'timers';
-
 const express = require('express')
 const app = express()
 
