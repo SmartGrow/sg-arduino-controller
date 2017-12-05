@@ -4,8 +4,8 @@ FROM resin/raspberrypi3-node
 ENV INITSYSTEM on
 
 COPY . /app
+RUN cd /app && npm install
 
 CMD ["node", "/app/server.js"]
 
-# replace this with your application's default port
 EXPOSE 3000
