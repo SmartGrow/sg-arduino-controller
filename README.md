@@ -1,2 +1,2 @@
 # sg-arduino-controller
-Control arduino IO for SmartGrow project
+Controls arduino IO for SmartGrow project

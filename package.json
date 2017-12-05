@@ -1,0 +1,24 @@
+{
+  "name": "sg-arduino-controller",
+  "version": "1.0.0",
+  "description": "Control arduino IO for SmartGrow project",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.2",
+    "johnny-five": "^0.11.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"No tests to run.\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SmartGrow/sg-arduino-controller.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SmartGrow/sg-arduino-controller/issues"
+  },
+  "homepage": "https://github.com/SmartGrow/sg-arduino-controller#readme"
+}
