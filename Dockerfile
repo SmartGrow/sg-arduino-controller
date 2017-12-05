@@ -6,6 +6,6 @@ ENV INITSYSTEM on
 COPY . /app
 RUN cd /app && npm install
 
-CMD ["node", "/app/server.js"]
+CMD ["udevadm trigger && node /app/server.js"]
 
 EXPOSE 3000
