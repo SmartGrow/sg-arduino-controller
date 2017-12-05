@@ -4,8 +4,8 @@ FROM resin/raspberrypi3-node
 ENV INITSYSTEM on
 
 COPY . /app
-RUN cd /app && npm install
 
-CMD ["udevadm trigger && node /app/server.js"]
+WORKDIR /app
+RUN npm install
 
 EXPOSE 3000
