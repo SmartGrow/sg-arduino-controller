@@ -16,7 +16,8 @@
     "serve-favicon": "~2.4.5"
   },
   "scripts": {
-    "start": "udevadm trigger && node server.js",
+    "start": "PORT=3000 node app/bin/www",
+    "production": "udevadm trigger && NODE_ENV=production PORT=80 node app/bin/www",
     "test": "echo \"No tests to run.\" && exit 0"
   },
   "repository": {
