@@ -24,7 +24,7 @@ app.use(cookieParser());
 store.initialize();
 
 // Routes
-app.use('/users', users);
+app.use('/api/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
