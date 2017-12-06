@@ -44,4 +44,11 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+
+boardActions = require('./actions/board')
+setInterval(function() {
+  store.dispatch(boardActions.update());
+}, 3000)
+
+
 module.exports = app;

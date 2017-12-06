@@ -14,5 +14,9 @@ router.get('/add', function(req, res, next) {
   res.sendStatus(200)
 });
 
+router.get('/counter', function(req, res, next) {
+  res.send('' + store.getState().board.counter);
+});
+
 
 module.exports = router;
