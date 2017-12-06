@@ -4,16 +4,17 @@
   "description": "Control arduino IO for SmartGrow project",
   "main": "index.js",
   "dependencies": {
-    "johnny-five": "^0.11.7",
     "body-parser": "~1.18.2",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.15.5",
+    "express-redux": "^1.1.3",
     "hbs": "~4.0.1",
+    "johnny-five": "^0.11.7",
     "morgan": "~1.9.0",
+    "redux": "^3.7.2",
     "serve-favicon": "~2.4.5"
   },
-  "devDependencies": {},
   "scripts": {
     "start": "udevadm trigger && node server.js",
     "test": "echo \"No tests to run.\" && exit 0"
