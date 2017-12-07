@@ -1,7 +1,4 @@
 module.exports = {
-    update : function() {
-        return {
-            type: 'UPDATE'
-        }
-    }
+    turnOn : () => { return { type: 'TURN_ON' } },
+    turnOff : () => { return { type: 'TURN_OFF' } }
 }

@@ -8,6 +8,6 @@ COPY . /app
 WORKDIR /app
 RUN npm install
 
-CMD ["npm", "start"]
+CMD ["npm", "run production"]
 
 EXPOSE 80

@@ -8,7 +8,7 @@ module.exports = {
         if (!store) {
             store = redux.createStore(reducers);
         } else {
-            throw new Error("Store already created.");
+            throw new Error("Store already initialized.");
         }
     },
 

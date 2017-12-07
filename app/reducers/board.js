@@ -1,14 +1,13 @@
 boardInitialState = {
-    counter: 0
+    loop: 500,
+    on: false
 };
 
 module.exports = function(state = boardInitialState, action) {
-    console.log("Board Reducer received:", action, state);
-
+  
     switch (action.type) {
-        case 'UPDATE': {
-            return { counter: state.counter + 1 };
-        }
+        case 'TURN_ON': return Object.assign({}, state, { on: true });
+        case 'TURN_OFF': return Object.assign({}, state, { on: false })
     }
 
     return state;
