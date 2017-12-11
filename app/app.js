@@ -47,5 +47,7 @@ store.initialize();
 var arduino = require('./arduino');
 arduino.initialize();
 
+// Firebase
+// var firebase = require('firebase');
 
 module.exports = app;
