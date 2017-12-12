@@ -16,7 +16,10 @@ module.exports = {
         store.dispatch(action);
     },
 
-    getState: function() {
-        return store.getState();
+    getState: function(branch) {
+      if (branch) {
+        return store.getState()[branch];
+      }
+      return store.getState();
     }
 };
