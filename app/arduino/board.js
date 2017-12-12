@@ -26,17 +26,19 @@ var initialize = () => {
   // });
 
   board = {};
-  var boardConfig = store.getState("board");
-
+  var state = store.getState();
+  
   setInterval(() => {
-    boardConfig = store.getState("board");
-    if (boardConfig.on) {
+    state = store.getState();
+
+    if (state.board.on) {
       listeners.forEach(listener => {
-        listener.listener(boardConfig);
+        
+        listener.listener(state);
       });
 
     }
-  }, boardConfig.loop);
+  }, state.board.refreshRate);
 
   return board;
 };

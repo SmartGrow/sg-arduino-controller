@@ -5,7 +5,7 @@ var boardActions = require('../actions/board');
 var store = require('../store');
 
 router.get('/', function(req, res, next) {
-  res.json(store.getState().board);
+  res.json(store.getState());
 });
 
 router.put('/turn-on', function(req, res, next) {
