@@ -33,8 +33,9 @@ var initialize = () => {
 
     if (state.board.on) {
       listeners.forEach(listener => {
-        
-        listener.listener(state);
+        if (listener.listener) {
+          listener.listener(state);
+        }
       });
 
     }
@@ -52,7 +53,10 @@ var validateListener = (listener) => {
   var args = Validate.named(listener, {
     type: 'string',
     name: 'string',
-    listener: 'function'
+    listener: {
+      isa: 'function',
+      optional: true
+    }
   });
 
   if (!args.isValid()) {

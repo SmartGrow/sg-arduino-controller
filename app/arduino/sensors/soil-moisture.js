@@ -5,10 +5,11 @@ var sensorActions = require('../../actions/sensors');
 
 var instance;
 
-var mockThreshold = 30;
+/**
+ * Mock
+ */
 var mockValue = 50;
 var inverse = false;
-
 var mockReadPinValue = () => {
   if (mockValue == 20) {
     inverse = true;
@@ -24,21 +25,12 @@ var mockReadPinValue = () => {
 function SoilMoistureSensor(props) {
   this.type = "SENSOR";
   this.name = "Soil Moisture";
-  this.listener = (state) => {
 
+  setInterval(() => {
     var value = mockReadPinValue();
     store.dispatch(sensorActions.soilMoistureUpdate(value));
+  }, 200);
 
-    if (value <= mockThreshold) {
-      if (!state.sensors.waterPumpState) {
-        store.dispatch(sensorActions.turnOnWaterPump());
-      }
-    } else {
-      if (state.sensors.waterPumpState) {
-        store.dispatch(sensorActions.turnOffWaterPump());
-      }
-    }
-  }
 };
 
 module.exports = {

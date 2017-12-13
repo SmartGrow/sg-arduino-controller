@@ -1,5 +1,7 @@
 var board = require('./board');
 var sensors = require('./sensors');
+var actuators = require('./actuators');
+
 
 var arduino;
 
@@ -11,7 +13,8 @@ module.exports = {
 
     arduino = {
       board: board.initialize(),
-      sensors: sensors.initialize()
+      sensors: sensors.initialize(),
+      actuators: actuators.initialize()
     };
 
     return arduino;
